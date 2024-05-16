@@ -30,3 +30,16 @@ Ejecutar este comando
 docker compose -f docker-compose.prod.yml build
 ```
 
+```
+docker buildx build ^
+--platform linux/amd64,linux/arm64 ^
+-t pandc19/teslo-shop:latest --push .
+```
+
+## Digital Ocean
+```
+docker buildx build ^
+--platform linux/amd64,linux/arm64 ^
+-t registry.digitalocean.com/japc-registry-dev/teslo-shop:latest --push .
+```
+
